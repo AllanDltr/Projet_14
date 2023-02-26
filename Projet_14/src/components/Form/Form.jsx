@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {useNavigate} from 'react-router-dom';
 import {useDispatch} from 'react-redux';
+import { DatePicker, DateOfBirth } from '../DatePicker/DatePicker';
 import './Form.css'
 
 export const Form = () =>{
@@ -19,11 +20,11 @@ export const Form = () =>{
                 </div>
                 <div className="form__wrapper">
                     <label htmlFor="dateOfBirth"> Date of Birth </label>
-                    <input type="date" id="dateOfBirth" name="dateOfBirth" />
+                    <DatePicker> </DatePicker>
                 </div>
                 <div className="form__wrapper">
                     <label htmlFor="startDate"> Start Date </label>
-                    <input type="date" id="startDate" name="startDate" />
+                    <DatePicker> </DatePicker>
                 </div>
                 <div className="form__wrapper">
                     <label htmlFor="street"> Street </label>
