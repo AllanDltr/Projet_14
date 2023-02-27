@@ -18,3 +18,7 @@ label {
   #state, #department {
     width:177px;
   }
+
+.chakra-select__icon-wrapper {
+  visibility: hidden;
+}

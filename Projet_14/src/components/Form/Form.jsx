@@ -16,7 +16,6 @@ export function  Form() {
 
     const handleChange = (e) => {
         setState({state:e.target.value});
-        console.log(e)
     };
 
     return (
