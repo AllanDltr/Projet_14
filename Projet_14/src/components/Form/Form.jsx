@@ -2,9 +2,22 @@ import React, { useState, useEffect } from 'react';
 import {useNavigate} from 'react-router-dom';
 import {useDispatch} from 'react-redux';
 import { DatePicker, DateOfBirth } from '../DatePicker/DatePicker';
+import { Select } from "@chakra-ui/select";
+import { Modal } from '../Modale/Modale';
+import { states } from '../../datas/states';
 import './Form.css'
+import props from 'prop-types';
 
-export const Form = () =>{
+
+export function  Form() {
+    const [openModal, setOpenModal] = useState(false);
+    const [state, setState] = useState("");
+
+
+    const handleChange = (e) => {
+        setState({state:e.target.value});
+        console.log(e)
+    };
 
     return (
         <div className="create__employee__content">
@@ -35,8 +48,12 @@ export const Form = () =>{
                     <input type="text" id="city" name="city" />
                 </div>
                 <div className="form__wrapper">
-                    <label htmlFor="state"> State </label>
-                    <input type="text" id="state" name="state" />
+                    <label htmlFor="state" > STATE </label>
+                    <Select id="state" name="state" value="Alabama" onChange={handleChange}>
+                        {states.map((state) => (
+                        <option key={state.key} value={state.name}>{state.name}</option>
+                            ))}
+                    </Select>
                 </div>
                 <div className="form__wrapper">
                     <label htmlFor="zipCode"> Zip Code </label>
@@ -44,15 +61,17 @@ export const Form = () =>{
                 </div>
                 <div className="form__wrapper">
                     <label htmlFor="department"> Department </label>
-                    <select id="department" name="department">
+                    <Select id="department" name="department">
                         <option value="0"> Sales </option>
                         <option value="1"> Marketing </option>
                         <option value="2"> Engineering </option>
                         <option value="3"> Human Resources </option>
                         <option value="4"> Legal </option>
-                    </select>
+                    </Select>
                 </div>
 
             </form>
+            <button className="modal__OpenBtn" onClick={() => {setOpenModal(true)}}> Save </button>
+            {openModal && <Modal setOpenModal={setOpenModal}/>}
         </div>
 )};

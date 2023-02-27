@@ -3,3 +3,18 @@ label {
     margin-top: 1rem;
     margin-bottom: 10px;
 }
+
+.modal__OpenBtn {
+    margin-top:20px;
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 6px;
+    background-color: blueviolet;
+    color: white;
+    cursor: pointer;
+  }
+
+  #state, #department {
+    width:177px;
+  }

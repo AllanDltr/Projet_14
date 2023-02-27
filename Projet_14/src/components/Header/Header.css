@@ -1,0 +1,17 @@
+.header {
+    height: 150px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left:20px;
+    padding-right: 60px;
+}
+
+.logo {
+    height:150px;
+}
+
+.page {
+    margin-right: 20px;
+}
