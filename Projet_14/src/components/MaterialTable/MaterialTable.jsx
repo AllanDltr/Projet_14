@@ -4,7 +4,7 @@ import { dataEmployees } from '../../datas/employees';
 import './MaterialTable.css';
 //nested data is ok, see accessorKeys in ColumnDef below
 
-export const Example = () => {
+export const DataTable = () => {
   //should be memoized or stable
   const columns = useMemo(
     () => [

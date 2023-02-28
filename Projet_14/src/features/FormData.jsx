@@ -1,5 +1,3 @@
-import { department } from "../datas/employees";
-
 export const initialState = {
     firstName:"",
     lastName:"",
